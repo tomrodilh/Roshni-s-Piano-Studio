@@ -372,9 +372,8 @@ class Component extends DCLogic {
     const a = map[this.props.accent] || map['Bright Pink'];
     const glow = this.props.showGlow ?? true;
     const wa = 'https://wa.me/919326003472?text=' + encodeURIComponent("Hi Roshni, I'm interested in piano lessons. I'm based in [country/time zone] and I'd like to book a trial lesson.");
-    // Google Calendar appointment scheduling link. For the calendar to appear INSIDE the page,
-    // replace this with Google's official embed URL (ends in ?gv=true) — see deploy notes.
-    const bookUrl = 'https://calendar.app.google/sutm3TSnArv4jF8v6';
+    // Google Calendar appointment scheduling — official embed URL (gv=true), works inside an iframe.
+    const bookUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Lb1cqohrc36LWJO0VDnU5hXSUC6fyfP7IIdnam-3sEOyVn5qcb0B8CQZ08zPK0ikx7zNvkvAr?gv=true';
 
     const bars = Array.from({ length: 38 }, (_, i) => ({
       h: Math.round(8 + 30 * Math.abs(Math.sin(i * 0.55 + 0.4)) + (i % 7 === 0 ? 8 : 0)),
